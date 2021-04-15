@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SectionContainer = styled.div`
-  background-image: url("/img/img_section_1.jpeg");
+  background-image: url("/images/img_section_1.jpeg");
   background-position: center;
   background-size: cover;
   width: 100%;

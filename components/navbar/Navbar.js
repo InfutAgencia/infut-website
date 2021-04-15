@@ -43,7 +43,7 @@ const Navbar = () => {
       <NavbarContainer>
         <Link href="#base" scroll={true}>
           <NavBrand
-            src="/Img/infut-logo.webp"
+            src="/images/infut-logo.webp"
             width="75%"
             height="75%"
             onClick={closeMobileMenu}
