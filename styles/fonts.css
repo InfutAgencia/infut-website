@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "nexabold";
+  src: url("/fonts/nexabold-webfont.woff2") format("woff2"),
+    url("/fonts/nexabold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "nexabold_italic";
+  src: url("/fonts/nexabolditalic-webfont.woff2") format("woff2"),
+    url("/fonts/nexabolditalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "nexabook";
+  src: url("/fonts/nexabook-webfont.woff2") format("woff2"),
+    url("/fonts/nexabook-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "nexabook_italic";
+  src: url("/fonts/nexabookitalic-webfont.woff2") format("woff2"),
+    url("/fonts/nexabookitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "nexalight";
+  src: url("/fonts/nexalight-webfont.woff2") format("woff2"),
+    url("/fonts/nexalight-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "nexalight_italic";
+  src: url("/fonts/nexalightitalic-webfont.woff2") format("woff2"),
+    url("/fonts/nexalightitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "nexathin_italic";
+  src: url("/fonts/nexathinitalic-webfont.woff2") format("woff2"),
+    url("/fonts/nexathinitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "nexaxbold";
+  src: url("/fonts/nexaxbold-webfont.woff2") format("woff2"),
+    url("/fonts/nexaxbold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "nexaxbold_italic";
+  src: url("/fonts/nexaxbolditalic-webfont.woff2") format("woff2"),
+    url("/fonts/nexaxbolditalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "nexa_boldregular";
+  src: url("/fonts/nexa_bold-webfont.woff2") format("woff2"),
+    url("/fonts/nexa_bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "nexa_lightregular";
+  src: url("/fonts/nexa_light-webfont.woff2") format("woff2"),
+    url("/fonts/nexa_light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "nexablack";
+  src: url("/fonts/nexablack-webfont.woff2") format("woff2"),
+    url("/fonts/nexablack-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "nexalight", sans-serif;
+}
