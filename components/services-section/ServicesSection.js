@@ -18,7 +18,7 @@ const ServicesSection = () => {
         <ContentWrapper>
           <ContentBlock>
             <BlockImageContainer>
-              <BlockImage src="/ship.webp" />
+              <BlockImage src="/img/ship.webp" width="50%" height="50%" />
             </BlockImageContainer>
             <BlockText>
               <PinkColor>
@@ -31,7 +31,7 @@ const ServicesSection = () => {
         <ContentWrapper>
           <ContentBlock>
             <BlockImageContainer>
-              <BlockImage src="/telescope.webp" />
+              <BlockImage src="/img/telescope.webp" width="50%" height="50%" />
             </BlockImageContainer>
             <BlockText>
               <PinkColor>Estrategias de marketing digital y offline.</PinkColor>
@@ -41,7 +41,7 @@ const ServicesSection = () => {
         <ContentWrapper>
           <ContentBlock>
             <BlockImageContainer>
-              <BlockImage src="/astronaut.webp" />
+              <BlockImage src="/img/astronaut.webp" width="50" height="50%" />
             </BlockImageContainer>
             <BlockText>
               <PinkColor>Servicio de diseño y montaje audiovisual</PinkColor>

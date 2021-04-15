@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import image from "next/image";
 
 export const ServicesContainer = styled.div`
   width: 100%;
@@ -35,7 +36,7 @@ export const BlockImageContainer = styled.div`
     min-width: 100%;
   }
 `;
-export const BlockImage = styled.img`
+export const BlockImage = styled(image)`
   min-width: 60px;
   max-width: 80px;
 `;
