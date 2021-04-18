@@ -23,7 +23,7 @@ export const GlobalStyle = createGlobalStyle`
 
 export const Container = styled.div`
   max-width: 1400px;
-  margin: 2rem auto;
+  margin: 2rem auto ${({ mBot }) => (mBot ? mBot : "2rem")} auto;
   padding: 2rem 0rem;
 
   @media screen and (max-width: 1400px) {

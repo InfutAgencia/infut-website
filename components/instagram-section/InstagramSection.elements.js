@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+export const InstagramContainer = styled.div`
+  width: 100%;
+  background-color: #eaeaea;
+  margin: 0;
+  padding: 0;
+`;
+
 export const HeadTitle = styled.h2`
   text-align: center;
 `;
