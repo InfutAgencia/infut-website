@@ -13,7 +13,7 @@ import {
 
 const ServicesSection = () => {
   return (
-    <Container id="services">
+    <Container id="servicios">
       <Row col={3}>
         <ContentWrapper>
           <ContentBlock>

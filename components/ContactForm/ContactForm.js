@@ -10,7 +10,7 @@ import {
 } from "./ContactForm.elements";
 const ContactForm = () => {
   return (
-    <ContactContainer id="contact">
+    <ContactContainer id="contacto">
       <ContactHeading>Háblanos, estamos para apoyarte</ContactHeading>
       <Form>
         <FormWrapper>

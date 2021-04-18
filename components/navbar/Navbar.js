@@ -54,12 +54,12 @@ const Navbar = () => {
         </MobileIcon>
         <NavLinkList onClick={handleClick} click={click}>
           <NavLinkItem>
-            <Link href="">
+            <Link href="#base">
               <NavLinkText>Base espacial</NavLinkText>
             </Link>
           </NavLinkItem>
           <NavLinkItem>
-            <Link href="#services">
+            <Link href="#servicios">
               <NavLinkText>Servicios</NavLinkText>
             </Link>
           </NavLinkItem>
@@ -69,17 +69,17 @@ const Navbar = () => {
             </Link>
           </NavLinkItem>
           <NavLinkItem>
-            <Link href="">
+            <Link href="#misiones">
               <NavLinkText>Misiones</NavLinkText>
             </Link>
           </NavLinkItem>
           <NavLinkItem>
-            <Link href="">
+            <Link href="/blog">
               <NavLinkText>Blog</NavLinkText>
             </Link>
           </NavLinkItem>
           <NavLinkItem>
-            <Link href="">
+            <Link href="#contacto">
               <NavLinkText>Contacto</NavLinkText>
             </Link>
           </NavLinkItem>
