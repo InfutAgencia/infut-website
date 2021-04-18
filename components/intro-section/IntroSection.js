@@ -9,7 +9,7 @@ const IntroSection = () => {
     <SectionContainer id="base">
       <TextWrapper>
         <TagLine>Tu marca es un cohete</TagLine>
-        <Text>Impulsarla al universo digital es nuestra mision</Text>
+        <Text>Impulsarla al universo digital es nuestra misión</Text>
       </TextWrapper>
     </SectionContainer>
   );

@@ -22,13 +22,12 @@ export const ContentWrapper = styled.div`
 export const ContentBlock = styled.div`
   display: flex;
   flex-direction: row;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1200px) {
     flex-direction: column;
   }
 `;
 export const BlockImageContainer = styled.div`
   width: 50%;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,7 +47,7 @@ export const PinkColor = styled.span`
 
 export const ServicesList = styled.ul`
   width: 100%;
-  margin: 0;
+  margin: 0rem 1rem;
 `;
 
 export const ServicesItem = styled.li``;

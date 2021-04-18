@@ -1,4 +1,5 @@
 import Head from "next/head";
+import ContactForm from "../components/ContactForm/ContactForm";
 import InstagramSection from "../components/instagram-section/InstagramSection";
 import IntroSection from "../components/intro-section/IntroSection";
 import MisionsSection from "../components/misions-section/MisionsSection";
@@ -15,6 +16,7 @@ export default function Home() {
       <ServicesSection />
       <MisionsSection />
       <InstagramSection />
+      <ContactForm />
     </div>
   );
 }

@@ -21,6 +21,9 @@ export const SectionContainer = styled.div`
 export const TextWrapper = styled.div`
   width: 1400px;
   height: auto;
+  @media screen and (min-width: 768px) {
+    margin: 0rem 2rem;
+  }
 `;
 export const TagLine = styled.p`
   font-size: 2rem;
