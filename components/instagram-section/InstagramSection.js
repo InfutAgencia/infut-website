@@ -7,34 +7,32 @@ import {
   InfoContainer,
   UserText,
 } from "./InstagramSection.elements";
-const InstagramSection = () => {
+const InstagramSection = ({ instagramPosts }) => {
   return (
     <InstagramContainer>
       <Container mBot="0rem">
         <HeadTitle>Un dia en la base espacial</HeadTitle>
         <InfoContainer>
           <UserText>@infut</UserText>
-          <FollowButton>Siguenos</FollowButton>
+          <FollowButton
+            href={"https://www.instagram.com/infutgrowth/"}
+            target={"blank"}
+            rel={"noopener"}
+          >
+            Siguenos
+          </FollowButton>
         </InfoContainer>
         <Row col={3}>
-          <Card
-            post={{
-              url:
-                "https://images.unsplash.com/photo-1510022151265-1bb84d406531?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-            }}
-          />
-          <Card
-            post={{
-              url:
-                "https://images.unsplash.com/photo-1510022151265-1bb84d406531?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-            }}
-          />
-          <Card
-            post={{
-              url:
-                "https://images.unsplash.com/photo-1510022151265-1bb84d406531?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-            }}
-          />
+          {instagramPosts.map(({ node }, i) => (
+            <Card
+              post={{
+                url: node.thumbnail_src,
+              }}
+              alt={node.edge_media_to_caption.edges[0].node.text
+                .replace(/(#\w+)+/g, "")
+                .trim()}
+            />
+          ))}
         </Row>
       </Container>
     </InstagramContainer>
