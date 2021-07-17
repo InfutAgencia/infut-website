@@ -31,6 +31,7 @@ const InstagramSection = ({ instagramPosts }) => {
               alt={node.edge_media_to_caption.edges[0].node.text
                 .replace(/(#\w+)+/g, "")
                 .trim()}
+              key={i}
             />
           ))}
         </Row>

@@ -5,6 +5,8 @@ export const Container = styled.div`
   height: 100%;
   padding: 2rem;
   background-color: #140522;
+  position: relative;
+  min-height: 50vh;
 `;
 
 export const Wrapper = styled.div`
@@ -32,3 +34,17 @@ export const HeadLine = styled.p`
 export const Text = styled.p`
   width: 100%;
 `;
+
+
+export const Clouds = styled.div`
+width: 100%;
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+top: 50;
+background: url("/img/clouds.png");
+background-repeat: no-repeat;
+background-position: bottom;
+background-size: contain;
+`

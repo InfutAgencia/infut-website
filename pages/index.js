@@ -15,7 +15,7 @@ export default function Home({ instagramPosts, projects }) {
         <title>Home</title>
       </Head>
       <IntroSection />
-      <AboutUsSection />
+      {/* <AboutUsSection /> */}
       <ServicesSection />
       <MisionsSection />
       <InstagramSection instagramPosts={instagramPosts} />

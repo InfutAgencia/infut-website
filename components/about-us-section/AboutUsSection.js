@@ -5,10 +5,12 @@ import {
   Title,
   HeadLine,
   Text,
+  Clouds
 } from "./AboutUsSection.elements";
 const AboutUsSection = () => {
   return (
     <Container>
+      <Clouds/>
       <Wrapper>
         <HeadWrapper>
           <Title>Infut</Title>
