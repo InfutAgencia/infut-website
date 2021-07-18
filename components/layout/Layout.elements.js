@@ -38,7 +38,7 @@ export const Row = styled.div`
   gap: 4rem;
   margin: 4rem 0rem 0rem 0rem;
   width: 100%;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 960px) {
     grid-template-columns: 100%;
     gap: 4rem;
     margin: 2rem 0rem;

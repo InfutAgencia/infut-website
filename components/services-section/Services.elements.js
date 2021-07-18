@@ -22,8 +22,11 @@ export const ContentWrapper = styled.div`
 export const ContentBlock = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: center;
   @media screen and (max-width: 1200px) {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 `;
 export const BlockImageContainer = styled.div`
@@ -43,11 +46,21 @@ export const BlockText = styled.p``;
 
 export const PinkColor = styled.span`
   color: #ec117b;
+
+  @media screen and (max-width: 960px) {
+    display: flex;
+    justify-content: center;
+  }
 `;
 
 export const ServicesList = styled.ul`
-  width: 100%;
+  width: 60%;
   margin: 0rem 1rem;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding: 0 2rem;
+    margin: 0;
+  }
 `;
 
 export const ServicesItem = styled.li``;

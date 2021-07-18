@@ -15,7 +15,7 @@ export const Nav = styled.nav`
   @media screen and (max-width: 1400px) {
     padding: 1rem 2rem;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 960px) {
     position: sticky;
     background-color: #140522;
   }
@@ -24,7 +24,7 @@ export const Nav = styled.nav`
 export const MobileIcon = styled.div`
   display: none;
   pointer-events: none;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 960px) {
     pointer-events: all;
     display: block;
     position: absolute;
@@ -60,7 +60,7 @@ export const NavLinkList = styled.ul`
   align-items: center;
   list-style: none;
   text-align: center;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 960px) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -88,7 +88,7 @@ export const NavLinkItem = styled.li`
     transition: ease 0.5s;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 960px) {
     margin: 0px;
     height: 60px;
   }

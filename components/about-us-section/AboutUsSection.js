@@ -5,32 +5,41 @@ import {
   Title,
   HeadLine,
   Text,
-  Clouds
+  Clouds,
+  TextWrapper,
+  Img,
 } from "./AboutUsSection.elements";
 const AboutUsSection = () => {
   return (
     <Container>
-      <Clouds/>
       <Wrapper>
         <HeadWrapper>
           <Title>Infut</Title>
           <HeadLine>agencia digital</HeadLine>
         </HeadWrapper>
-        <Text>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita
-          rerum esse nihil sint repudiandae veniam eos accusantium, numquam
-          eveniet sunt ratione? Debitis nisi aperiam quod quisquam laudantium!
-          Quas eos, ipsam perspiciatis, vero possimus aspernatur modi veniam
-          quod eligendi nostrum quibusdam excepturi ipsum fugit libero est
-          molestias id maxime perferendis dolorum in aut unde, consequatur
-          exercitationem provident! Expedita harum minus laboriosam corporis
-          iure nam unde dolorem, vel facilis fugit corrupti ullam alias voluptas
-          ratione ducimus error voluptatum vitae assumenda nisi fugiat veritatis
-          ad. Beatae corporis ducimus error repellat, dolores amet dolorem ab,
-          doloremque eius nesciunt adipisci consequuntur ipsum. Pariatur, qui
-          quidem?
-        </Text>
+        <TextWrapper>
+          <Text>
+            Infut es un cosmódromo digital, un espacio creado para el
+            lanzamiento, asistencia técnica y aterrizaje de cohetes en el nuevo
+            mundo de la digitalización.
+          </Text>
+          <Text>
+            Todas las naves espaciales necesitan soporte, para ello, Infut
+            cuenta con un equipo capacitado que te respaldará monitoreando y
+            construyendo estrategias para superar cualquier obstáculo que se
+            presentente en el camino. No estarás solo, emprenderemos contigo
+            esta aventura de digitalizar y transformar tu modelo de negocio.
+          </Text>
+          <Text>
+            <strong>
+              Pd: Es un viaje sin retorno, pero no te preocupes, estamos seguros
+              de que no querrás volver atrás.
+            </strong>
+          </Text>
+        </TextWrapper>
       </Wrapper>
+      {/* <Clouds /> */}
+      <Img src="/img/Clouds.png" alt="" />
     </Container>
   );
 };

@@ -12,10 +12,10 @@ export default function Home({ instagramPosts, projects }) {
     <div>
       <Head>
         <link rel="icon" type="favicon/ico" href="/infut.ico" />
-        <title>Home</title>
+        <title>Infut</title>
       </Head>
       <IntroSection />
-      {/* <AboutUsSection /> */}
+      <AboutUsSection />
       <ServicesSection />
       <MisionsSection />
       <InstagramSection instagramPosts={instagramPosts} />
