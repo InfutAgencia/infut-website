@@ -39,7 +39,8 @@ const AboutUsSection = () => {
         </TextWrapper>
       </Wrapper>
       {/* <Clouds /> */}
-      <Img src="/img/Clouds.png" alt="" />
+
+      <Img src="/img/Clouds.webp" alt="Clouds" />
     </Container>
   );
 };
