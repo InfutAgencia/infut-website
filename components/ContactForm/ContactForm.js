@@ -42,16 +42,20 @@ const ContactForm = () => {
             placeholder="Nombre"
             name="name"
             onChange={handleUser}
+            required
           ></FormInput>
           <FormInput
             placeholder="Email"
             name="email"
             onChange={handleUser}
+            pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+"
+            required
           ></FormInput>
           <FormInput
             placeholder="Teléfono"
             name="phone"
             onChange={handleUser}
+            required
           ></FormInput>
         </FormWrapper>
         <FormWrapper>
@@ -60,6 +64,7 @@ const ContactForm = () => {
             rows="5"
             name="message"
             onChange={handleUser}
+            required
           ></TextArea>
           <SubmitButton type="submit">Enviar</SubmitButton>
         </FormWrapper>
