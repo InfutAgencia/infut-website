@@ -4,6 +4,7 @@ import Footer from "../components/footer/Footer";
 import "../styles/globals.css";
 import "../styles/fonts.css";
 import Head from "next/head";
+import GoogleAnalytics from "../components/GoogleAnalytics/GoogleAnalytics";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -14,8 +15,9 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <GlobalStyle />
       <Navbar />
-
-      <Component {...pageProps} />
+      <GoogleAnalytics>
+        <Component {...pageProps} />
+      </GoogleAnalytics>
     </>
   );
 }

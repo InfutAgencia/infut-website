@@ -1,4 +1,5 @@
 import { useState } from "react";
+import * as gtag from "../../lib/gtag";
 import axiosClient from "../../config/axios";
 import {
   ContactContainer,
@@ -26,10 +27,18 @@ const ContactForm = () => {
   const sendMessage = async (e) => {
     e.preventDefault();
     try {
-      const res = await axiosClient.post("/contacts", user);
-      console.log(res.data);
+      await axiosClient.post("/contacts", user);
+      gtag.event({
+        action: "submit_form",
+        category: "Contact",
+        label: user.message,
+      });
     } catch (error) {
-      console.log(error.response?.data);
+      gtag.event({
+        action: "submit_form_error",
+        category: "Contact",
+        label: user.message,
+      });
     }
   };
 
