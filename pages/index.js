@@ -26,14 +26,14 @@ export default function Home({ instagramPosts, projects }) {
 
 export async function getServerSideProps(ctx) {
   const client = new Instagram({
-    username: process.env.NEXT_PUBLIC_INSTAGRAM_USER,
-    password: process.env.NEXT_PUBLIC_INSTAGRAM_PASS,
+    username: process.env.INSTAGRAM_USER,
+    password: process.env.INSTAGRAM_PASS,
   });
 
   let posts = [];
   try {
     const data = await client.getPhotosByUsername({
-      username: process.env.NEXT_PUBLiC_INSTAGRAM_USER,
+      username: process.env.INSTAGRAM_USER,
     });
     if (data.user.edge_owner_to_timeline_media.count > 0) {
       posts = [
