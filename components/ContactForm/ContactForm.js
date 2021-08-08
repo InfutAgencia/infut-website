@@ -37,7 +37,7 @@ const ContactForm = () => {
       gtag.event({
         action: "submit_form_error",
         category: "Contact",
-        label: user.message,
+        label: error.response?.data,
       });
     }
   };

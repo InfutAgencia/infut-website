@@ -1,4 +1,3 @@
-import Instagram from "instagram-web-api";
 import Head from "next/head";
 import AboutUsSection from "../components/about-us-section/AboutUsSection";
 import ContactForm from "../components/ContactForm/ContactForm";
@@ -6,6 +5,8 @@ import InstagramSection from "../components/instagram-section/InstagramSection";
 import IntroSection from "../components/intro-section/IntroSection";
 import MisionsSection from "../components/misions-section/MisionsSection";
 import ServicesSection from "../components/services-section/ServicesSection";
+import { getInstagramPosts } from "../lib/Instagram API/getPosts";
+import { getInfutProjects } from "../lib/Projects/getInfutProjects";
 
 export default function Home({ instagramPosts, projects }) {
   return (
@@ -17,7 +18,7 @@ export default function Home({ instagramPosts, projects }) {
       <IntroSection />
       <AboutUsSection />
       <ServicesSection />
-      <MisionsSection />
+      <MisionsSection projects={projects} />
       <InstagramSection instagramPosts={instagramPosts} />
       <ContactForm />
     </div>
@@ -25,31 +26,12 @@ export default function Home({ instagramPosts, projects }) {
 }
 
 export async function getServerSideProps(ctx) {
-  const client = new Instagram({
-    username: process.env.INSTAGRAM_USER,
-    password: process.env.INSTAGRAM_PASS,
-  });
-
-  let posts = [];
-  try {
-    const data = await client.getPhotosByUsername({
-      username: process.env.INSTAGRAM_USER,
-    });
-    if (data.user.edge_owner_to_timeline_media.count > 0) {
-      posts = [
-        data.user.edge_owner_to_timeline_media.edges[0],
-        data.user.edge_owner_to_timeline_media.edges[1],
-        data.user.edge_owner_to_timeline_media.edges[2],
-      ];
-    }
-  } catch (error) {
-    console.log("login error", error);
-  }
-
+  const { posts } = await getInstagramPosts();
+  const { projects } = await getInfutProjects();
   return {
     props: {
       instagramPosts: posts,
-      projects: [],
+      projects,
     },
   };
 }

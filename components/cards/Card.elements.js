@@ -2,9 +2,15 @@ import styled from "styled-components";
 
 export const CardContainer = styled.div`
   width: 100%;
+  height: auto;
+  aspect-ratio: 16 /9;
+
   position: relative;
   margin: 0;
   padding: 0;
+  background-image: url(${({ url }) => (url ? url : "null")});
+  background-position: center;
+  background-size: cover;
 `;
 
 export const CardTitle = styled.h2`
@@ -26,18 +32,38 @@ export const CardTitle = styled.h2`
     user-select: none;
   }
 `;
+export const CardText = styled.p`
+  color: white;
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  top: 40%;
+  bottom: 30%;
+
+  font-size: 1rem;
+
+  @media screen and (max-width: 768px) {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+  }
+`;
 
 export const CardBody = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(1, 1, 1, 0);
+  background-color: rgba(20, 5, 34, 0);
   bottom: 0;
   left: 0;
   padding: 0;
   margin: 0;
+
   &:hover {
-    background-color: rgba(1, 1, 1, 0.5);
+    background-color: rgba(20, 5, 34, 0.5);
     backdrop-filter: blur(5px);
     transition: ease 0.5s;
   }

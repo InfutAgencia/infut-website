@@ -5,20 +5,26 @@ import {
   CardBody,
   CardButton,
   Content,
+  CardText,
 } from "./Card.elements";
 
 //? reemplazar ur con post o proyecto
-const Card = ({ post, alt, type }) => {
+const Card = ({ project, alt, type }) => {
   return (
-    <CardContainer>
-      <CardImage src={post.url} alt={alt ? alt : ""} />
+    <CardContainer url={project?.posterImage?.formats?.small?.url}>
+      {/* <CardImage src={project?.posterImage?.url} alt={alt ? alt : ""} /> */}
       {type === "post" ? (
-        <CardBody>
-          <Content>
-            <CardTitle>Title Here</CardTitle>
-            <CardButton href="#link">Visitar</CardButton>
-          </Content>
-        </CardBody>
+        <>
+          <CardBody>
+            <Content>
+              <CardTitle>{project?.title}</CardTitle>
+              <CardText>{project?.description}</CardText>
+              <CardButton href={project?.url} target="_blank" rel="noopener">
+                Visitar
+              </CardButton>
+            </Content>
+          </CardBody>
+        </>
       ) : null}
     </CardContainer>
   );
