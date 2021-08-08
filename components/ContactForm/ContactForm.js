@@ -20,31 +20,33 @@ const ContactForm = () => {
   const [loading, setLoading] = useState(false);
 
   //todo VErify Message before send it
-  const sendMessage = async (data) => {
+  const sendMessage = (data) => {
     setLoading(true);
-    try {
-      await axiosClient.post("/contacts", data);
-      if (typeof window !== "undefined") {
-        gtag.event({
-          action: "submit_form",
-          category: "Contact",
-          label: user.message,
-        });
-      }
-      setError(false);
-      setLoading(false);
-      reset();
-    } catch (error) {
-      if (typeof window !== "undefined") {
-        gtag.event({
-          action: "submit_form_error",
-          category: "Contact",
-          label: error.response?.data,
-        });
-      }
-      setError(true);
-      setLoading(false);
-    }
+    setError(false);
+    axiosClient
+      .post("/contacts", data)
+      .then((res) => {
+        if (typeof window !== "undefined") {
+          gtag.event({
+            action: "submit_form",
+            category: "Contact",
+            label: user.message,
+          });
+        }
+        setLoading(false);
+        reset();
+      })
+      .catch((err) => {
+        if (typeof window !== "undefined") {
+          gtag.event({
+            action: "submit_form_error",
+            category: "Contact",
+            label: error.response?.data,
+          });
+        }
+        setError(true);
+        setLoading(false);
+      });
   };
 
   return (
