@@ -22,28 +22,26 @@ const ContactForm = () => {
   //todo VErify Message before send it
   const sendMessage = (data) => {
     setLoading(true);
-    setError(false);
     axiosClient
       .post("/contacts", data)
       .then((res) => {
-        if (typeof window !== "undefined") {
-          gtag.event({
-            action: "submit_form",
-            category: "Contact",
-            label: user.message,
-          });
-        }
+        gtag.event({
+          action: "submit_form",
+          category: "Contact",
+          label: user.message,
+        });
+
+        setError(false);
         setLoading(false);
         reset();
       })
       .catch((err) => {
-        if (typeof window !== "undefined") {
-          gtag.event({
-            action: "submit_form_error",
-            category: "Contact",
-            label: error.response?.data,
-          });
-        }
+        gtag.event({
+          action: "submit_form_error",
+          category: "Contact",
+          label: error.response?.data,
+        });
+
         setError(true);
         setLoading(false);
       });
