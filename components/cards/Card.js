@@ -12,11 +12,13 @@ import {
 //? reemplazar ur con post o proyecto
 const Card = ({ project, alt, type }) => {
   const handleView = ({ project_viewed }) => {
-    gtag.event({
-      action: "viewed_project",
-      category: "projects",
-      label: project_viewed,
-    });
+    if (typeof window !== "undefined") {
+      gtag.event({
+        action: "viewed_project",
+        category: "projects",
+        label: project_viewed,
+      });
+    }
   };
 
   return (
