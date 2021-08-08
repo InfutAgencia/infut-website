@@ -10,25 +10,20 @@ import {
   FormInput,
   TextArea,
   SubmitButton,
+  ErrorWarning,
 } from "./ContactForm.elements";
+import { useForm } from "react-hook-form";
 
 const ContactForm = () => {
-  const [user, setUser] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
-
-  const handleUser = (e) => {
-    setUser({ ...user, [e.target.name]: e.target.value });
-  };
+  const { register, handleSubmit, reset } = useForm();
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   //todo VErify Message before send it
-  const sendMessage = async (e) => {
-    e.preventDefault();
+  const sendMessage = async (data) => {
+    setLoading(true);
     try {
-      await axiosClient.post("/contacts", user);
+      await axiosClient.post("/contacts", data);
       if (typeof window !== "undefined") {
         gtag.event({
           action: "submit_form",
@@ -36,6 +31,9 @@ const ContactForm = () => {
           label: user.message,
         });
       }
+      reset();
+      setError(false);
+      setLoading(false);
     } catch (error) {
       if (typeof window !== "undefined") {
         gtag.event({
@@ -44,32 +42,37 @@ const ContactForm = () => {
           label: error.response?.data,
         });
       }
+      setError(true);
+      setLoading(false);
     }
   };
 
   return (
     <ContactContainer id="contacto">
       <ContactHeading>Háblanos, estamos para apoyarte</ContactHeading>
-      <Form onSubmit={sendMessage}>
+      <Form onSubmit={handleSubmit(sendMessage)}>
         <FormWrapper>
           <FormInput
             placeholder="Nombre"
             name="name"
-            onChange={handleUser}
+            autoComplete="name"
             required
+            {...register("name")}
           ></FormInput>
           <FormInput
             placeholder="Email"
+            autoComplete="email"
             name="email"
-            onChange={handleUser}
             pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+"
+            {...register("email")}
             required
           ></FormInput>
           <FormInput
             placeholder="Teléfono"
+            autoComplete="tel"
             name="phone"
-            onChange={handleUser}
             required
+            {...register("phone")}
           ></FormInput>
         </FormWrapper>
         <FormWrapper>
@@ -77,10 +80,18 @@ const ContactForm = () => {
             placeholder="Mensaje"
             rows="5"
             name="message"
-            onChange={handleUser}
+            autoComplete="off"
+            {...register("message")}
             required
           ></TextArea>
-          <SubmitButton type="submit">Enviar</SubmitButton>
+
+          <SubmitButton
+            className={loading ? "spinner_loading" : ""}
+            type="submit"
+          >
+            <span class="button_text">Enviar</span>
+          </SubmitButton>
+          {error && <ErrorWarning>¡Ups! Ha ocurrido un error</ErrorWarning>}
         </FormWrapper>
       </Form>
     </ContactContainer>

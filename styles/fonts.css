@@ -107,5 +107,5 @@
 }
 
 * {
-  font-family: "nexalight", sans-serif;
+  font-family: "nexalight", sans-serif !important;
 }

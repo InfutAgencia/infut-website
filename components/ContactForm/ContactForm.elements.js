@@ -81,3 +81,10 @@ export const SubmitButton = styled.button`
   color: white;
   cursor: pointer;
 `;
+
+export const ErrorWarning = styled.small`
+  font-size: 16px;
+  color: rgb(238, 0, 0);
+  font-weight: 700;
+  margin: 8px 0;
+`;
