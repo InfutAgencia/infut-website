@@ -31,9 +31,9 @@ const ContactForm = () => {
           label: user.message,
         });
       }
-      reset();
       setError(false);
       setLoading(false);
+      reset();
     } catch (error) {
       if (typeof window !== "undefined") {
         gtag.event({
