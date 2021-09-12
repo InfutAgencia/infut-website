@@ -73,11 +73,11 @@ const Navbar = () => {
               <NavLinkText>Misiones</NavLinkText>
             </Link>
           </NavLinkItem>
-          <NavLinkItem>
+          {/* <NavLinkItem>
             <Link href="/blog">
               <NavLinkText>Blog</NavLinkText>
             </Link>
-          </NavLinkItem>
+          </NavLinkItem> */}
           <NavLinkItem>
             <Link href="#contacto">
               <NavLinkText>Contacto</NavLinkText>
