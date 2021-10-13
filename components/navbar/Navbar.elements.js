@@ -7,7 +7,7 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: center;
   color: white;
-  position: fixed;
+  position: ${({ bg }) => (bg ? "relative" : "fixed")};
   top: 0;
   z-index: 999;
   padding: 1rem;

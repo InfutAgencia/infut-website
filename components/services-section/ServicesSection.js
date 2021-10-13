@@ -10,7 +10,8 @@ import {
   ServicesList,
   ServicesItem,
 } from "./Services.elements";
-
+import Fade from "react-reveal/Fade";
+import Jump from "react-reveal/Jump";
 const ServicesSection = () => {
   return (
     <Container id="servicios">
@@ -51,99 +52,105 @@ const ServicesSection = () => {
 
         <ContentWrapper>
           <ContentBlock>
-            <ServicesList>
-              <ServicesItem>
-                <BlockText>Apps móviles para android y IOS</BlockText>
-              </ServicesItem>
-              <ServicesItem>
-                <BlockText>Apps de M-Commerce</BlockText>
-              </ServicesItem>
-              <ServicesItem>
-                <BlockText>Diseño UI-UX</BlockText>
-              </ServicesItem>
-              <ServicesItem>
-                <BlockText>Eventos digitales</BlockText>
-              </ServicesItem>
-              <ServicesItem>
-                <BlockText>Integración multiplataforma</BlockText>
-              </ServicesItem>
-              <ServicesItem>
-                <BlockText>Aplicaciones Para WordPress</BlockText>
-              </ServicesItem>
-              <ServicesItem>
-                <BlockText>Apps de visualización de productos</BlockText>
-              </ServicesItem>
-              <ServicesItem>
-                <BlockText>Aplicaciones de escritorio</BlockText>
-              </ServicesItem>
-            </ServicesList>
+            <Fade bottom>
+              <ServicesList>
+                <ServicesItem>
+                  <BlockText>Apps móviles para android y IOS</BlockText>
+                </ServicesItem>
+                <ServicesItem>
+                  <BlockText>Apps de M-Commerce</BlockText>
+                </ServicesItem>
+                <ServicesItem>
+                  <BlockText>Diseño UI-UX</BlockText>
+                </ServicesItem>
+                <ServicesItem>
+                  <BlockText>Eventos digitales</BlockText>
+                </ServicesItem>
+                <ServicesItem>
+                  <BlockText>Integración multiplataforma</BlockText>
+                </ServicesItem>
+                <ServicesItem>
+                  <BlockText>Aplicaciones Para WordPress</BlockText>
+                </ServicesItem>
+                <ServicesItem>
+                  <BlockText>Apps de visualización de productos</BlockText>
+                </ServicesItem>
+                <ServicesItem>
+                  <BlockText>Aplicaciones de escritorio</BlockText>
+                </ServicesItem>
+              </ServicesList>
+            </Fade>
           </ContentBlock>
         </ContentWrapper>
         <ContentWrapper>
           <ContentBlock>
-            <ServicesList>
-              <ServicesItem>
-                <BlockText>Community manager</BlockText>
-              </ServicesItem>
-              <ServicesItem>
-                <BlockText>Copywriting</BlockText>
-              </ServicesItem>
-              <ServicesItem>
-                <BlockText>Publicidad</BlockText>
-              </ServicesItem>
-              <ServicesItem>
-                <BlockText>Creación de marca</BlockText>
-              </ServicesItem>
-              <ServicesItem>
-                <BlockText>Chats bots</BlockText>
-              </ServicesItem>
-              <ServicesItem>
-                <BlockText>Shops en redes sociales</BlockText>
-              </ServicesItem>
-              <ServicesItem>
-                <BlockText>Omnicanalidad</BlockText>
-              </ServicesItem>
-              <ServicesItem>
-                <BlockText>Filtro para redes sociales</BlockText>
-              </ServicesItem>
-            </ServicesList>
+            <Fade bottom>
+              <ServicesList>
+                <ServicesItem>
+                  <BlockText>Community manager</BlockText>
+                </ServicesItem>
+                <ServicesItem>
+                  <BlockText>Copywriting</BlockText>
+                </ServicesItem>
+                <ServicesItem>
+                  <BlockText>Publicidad</BlockText>
+                </ServicesItem>
+                <ServicesItem>
+                  <BlockText>Creación de marca</BlockText>
+                </ServicesItem>
+                <ServicesItem>
+                  <BlockText>Chats bots</BlockText>
+                </ServicesItem>
+                <ServicesItem>
+                  <BlockText>Shops en redes sociales</BlockText>
+                </ServicesItem>
+                <ServicesItem>
+                  <BlockText>Omnicanalidad</BlockText>
+                </ServicesItem>
+                <ServicesItem>
+                  <BlockText>Filtro para redes sociales</BlockText>
+                </ServicesItem>
+              </ServicesList>
+            </Fade>
           </ContentBlock>
         </ContentWrapper>
 
         <ContentWrapper>
           <ContentBlock>
-            <ServicesList>
-              <ServicesItem>
-                <BlockText>Apps Web</BlockText>
-              </ServicesItem>
-              <ServicesItem>
-                <BlockText>
-                  Diseño y desarrollo de sitios web corporativas/E-Commerce
-                </BlockText>
-              </ServicesItem>
-              <ServicesItem>
-                <BlockText>Progressive Web Applications - PWA</BlockText>
-              </ServicesItem>
-              <ServicesItem>
-                <BlockText>
-                  Apps de realidad aumentada,realidad virtual y realidad mixta
-                </BlockText>
-              </ServicesItem>
-              <ServicesItem>
-                <BlockText>Inteligencia artificial</BlockText>
-              </ServicesItem>
-              <ServicesItem>
-                <BlockText>Videojuegos</BlockText>
-              </ServicesItem>
-              <ServicesItem>
-                <BlockText>Gamificación</BlockText>
-              </ServicesItem>
-              <ServicesItem>
-                <BlockText>
-                  Automatización de procesos (machine learning)
-                </BlockText>
-              </ServicesItem>
-            </ServicesList>
+            <Fade bottom>
+              <ServicesList>
+                <ServicesItem>
+                  <BlockText>Apps Web</BlockText>
+                </ServicesItem>
+                <ServicesItem>
+                  <BlockText>
+                    Diseño y desarrollo de sitios web corporativas/E-Commerce
+                  </BlockText>
+                </ServicesItem>
+                <ServicesItem>
+                  <BlockText>Progressive Web Applications - PWA</BlockText>
+                </ServicesItem>
+                <ServicesItem>
+                  <BlockText>
+                    Apps de realidad aumentada,realidad virtual y realidad mixta
+                  </BlockText>
+                </ServicesItem>
+                <ServicesItem>
+                  <BlockText>Inteligencia artificial</BlockText>
+                </ServicesItem>
+                <ServicesItem>
+                  <BlockText>Videojuegos</BlockText>
+                </ServicesItem>
+                <ServicesItem>
+                  <BlockText>Gamificación</BlockText>
+                </ServicesItem>
+                <ServicesItem>
+                  <BlockText>
+                    Automatización de procesos (machine learning)
+                  </BlockText>
+                </ServicesItem>
+              </ServicesList>
+            </Fade>
           </ContentBlock>
         </ContentWrapper>
       </Row>

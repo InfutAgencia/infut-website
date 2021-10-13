@@ -41,8 +41,15 @@ export const Card = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  align-self: start;
+  justify-self: center;
   cursor: pointer;
+  max-width: 380px;
+  padding: 0.5rem;
+  &:hover {
+    border-radius: 5px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+  }
+
   @media screen and (max-width: 768px) {
     width: 100%;
   }
@@ -74,7 +81,7 @@ export const ReadButton = styled.a`
   height: 35px;
   padding: 1rem;
   color: black;
-  font-size: 20px;
+  font-size: 18px;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -92,7 +99,7 @@ export const ReadButton = styled.a`
 
 export const PostTitle = styled.h2`
   padding: 1rem 0rem;
-  font-size: 2rem;
+  font-size: 24px;
 
   &:hover {
     text-decoration: underline;
@@ -103,7 +110,7 @@ export const PostTitle = styled.h2`
 `;
 export const PostDescription = styled.p`
   padding: 1rem 0rem;
-  font-size: 22px;
+  font-size: 18px;
   @media screen and (max-width: 330px) {
     font-size: 1rem;
   }
@@ -111,7 +118,7 @@ export const PostDescription = styled.p`
 
 export const Caption = styled.caption`
   text-align: left;
-  font-size: 20px;
+  font-size: 18px;
 `;
 
 export const Separator = styled.h2`

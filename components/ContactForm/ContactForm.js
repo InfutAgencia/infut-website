@@ -1,6 +1,7 @@
 import { useState } from "react";
 import * as gtag from "../../lib/gtag";
-
+import Jump from "react-reveal/Jump";
+import Fade from "react-reveal/Fade";
 import axiosClient from "../../config/axios";
 import {
   ContactContainer,
@@ -49,51 +50,55 @@ const ContactForm = () => {
 
   return (
     <ContactContainer id="contacto">
-      <ContactHeading>Háblanos, estamos para apoyarte</ContactHeading>
-      <Form onSubmit={handleSubmit(sendMessage)}>
-        <FormWrapper>
-          <FormInput
-            placeholder="Nombre"
-            name="name"
-            autoComplete="name"
-            required
-            {...register("name")}
-          ></FormInput>
-          <FormInput
-            placeholder="Email"
-            autoComplete="email"
-            name="email"
-            pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+"
-            {...register("email")}
-            required
-          ></FormInput>
-          <FormInput
-            placeholder="Teléfono"
-            autoComplete="tel"
-            name="phone"
-            required
-            {...register("phone")}
-          ></FormInput>
-        </FormWrapper>
-        <FormWrapper>
-          <TextArea
-            placeholder="Mensaje"
-            rows="5"
-            name="message"
-            autoComplete="off"
-            {...register("message")}
-            required
-          ></TextArea>
+      <Jump>
+        <ContactHeading>Háblanos, estamos para apoyarte</ContactHeading>
+      </Jump>
+      <Fade bottom>
+        <Form onSubmit={handleSubmit(sendMessage)}>
+          <FormWrapper>
+            <FormInput
+              placeholder="Nombre"
+              name="name"
+              autoComplete="name"
+              required
+              {...register("name")}
+            ></FormInput>
+            <FormInput
+              placeholder="Email"
+              autoComplete="email"
+              name="email"
+              pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+"
+              {...register("email")}
+              required
+            ></FormInput>
+            <FormInput
+              placeholder="Teléfono"
+              autoComplete="tel"
+              name="phone"
+              required
+              {...register("phone")}
+            ></FormInput>
+          </FormWrapper>
+          <FormWrapper>
+            <TextArea
+              placeholder="Mensaje"
+              rows="5"
+              name="message"
+              autoComplete="off"
+              {...register("message")}
+              required
+            ></TextArea>
 
-          <SubmitButton
-            className={loading ? "spinner_loading" : ""}
-            type="submit"
-          >
-            <span class="button_text">Enviar</span>
-          </SubmitButton>
-          {error && <ErrorWarning>¡Ups! Ha ocurrido un error</ErrorWarning>}
-        </FormWrapper>
-      </Form>
+            <SubmitButton
+              className={loading ? "spinner_loading" : ""}
+              type="submit"
+            >
+              <span class="button_text">Enviar</span>
+            </SubmitButton>
+            {error && <ErrorWarning>¡Ups! Ha ocurrido un error</ErrorWarning>}
+          </FormWrapper>
+        </Form>
+      </Fade>
     </ContactContainer>
   );
 };

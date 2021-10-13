@@ -5,7 +5,7 @@ import "../styles/fonts.css";
 import Head from "next/head";
 import GoogleAnalytics from "../components/GoogleAnalytics/GoogleAnalytics";
 
-function MyApp({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   return (
     <>
       <Head>
@@ -13,13 +13,12 @@ function MyApp({ Component, pageProps }) {
         <meta name="description" content="Infut Site" />
       </Head>
       <GlobalStyle />
-      <Navbar />
-
       <GoogleAnalytics>
+        {/* <Navbar /> */}
         <Component {...pageProps} />
       </GoogleAnalytics>
     </>
   );
 }
 
-export default MyApp;
+export default App;

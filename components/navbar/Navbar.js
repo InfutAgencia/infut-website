@@ -10,8 +10,10 @@ import {
   NavLinkItem,
   NavLinkText,
 } from "./Navbar.elements";
+import Jump from "react-reveal/Jump";
+import Fade from "react-reveal/Fade";
 
-const Navbar = () => {
+const Navbar = ({ bg }) => {
   const [click, setClick] = useState(false);
   const [navColor, setNavColor] = useState(false);
 
@@ -39,7 +41,7 @@ const Navbar = () => {
   }
 
   return (
-    <Nav color={navColor}>
+    <Nav color={bg ? bg : navColor} bg={bg}>
       <NavbarContainer>
         <Link href="#base" scroll={true}>
           <NavBrand
@@ -49,41 +51,44 @@ const Navbar = () => {
             onClick={closeMobileMenu}
           />
         </Link>
+
         <MobileIcon onClick={handleClick}>
           {click ? <FaTimes /> : <FaBars />}
         </MobileIcon>
-        <NavLinkList onClick={handleClick} click={click}>
-          <NavLinkItem>
-            <Link href="#base">
-              <NavLinkText>Base espacial</NavLinkText>
-            </Link>
-          </NavLinkItem>
-          <NavLinkItem>
-            <Link href="#servicios">
-              <NavLinkText>Servicios</NavLinkText>
-            </Link>
-          </NavLinkItem>
-          <NavLinkItem>
-            <Link href="">
-              <NavLinkText>Tripulación</NavLinkText>
-            </Link>
-          </NavLinkItem>
-          <NavLinkItem>
-            <Link href="#misiones">
-              <NavLinkText>Misiones</NavLinkText>
-            </Link>
-          </NavLinkItem>
-          {/* <NavLinkItem>
-            <Link href="/blog">
-              <NavLinkText>Blog</NavLinkText>
-            </Link>
-          </NavLinkItem> */}
-          <NavLinkItem>
-            <Link href="#contacto">
-              <NavLinkText>Contacto</NavLinkText>
-            </Link>
-          </NavLinkItem>
-        </NavLinkList>
+        <Fade top cascade>
+          <NavLinkList onClick={handleClick} click={click}>
+            <NavLinkItem>
+              <Link href="/#base">
+                <NavLinkText>Base espacial</NavLinkText>
+              </Link>
+            </NavLinkItem>
+            <NavLinkItem>
+              <Link href="/#servicios">
+                <NavLinkText>Servicios</NavLinkText>
+              </Link>
+            </NavLinkItem>
+            <NavLinkItem>
+              <Link href="/">
+                <NavLinkText>Tripulación</NavLinkText>
+              </Link>
+            </NavLinkItem>
+            <NavLinkItem>
+              <Link href="/#misiones">
+                <NavLinkText>Misiones</NavLinkText>
+              </Link>
+            </NavLinkItem>
+            <NavLinkItem>
+              <Link href="/#">
+                <NavLinkText>Blog</NavLinkText>
+              </Link>
+            </NavLinkItem>
+            <NavLinkItem>
+              <Link href="/#contacto">
+                <NavLinkText>Contacto</NavLinkText>
+              </Link>
+            </NavLinkItem>
+          </NavLinkList>
+        </Fade>
       </NavbarContainer>
     </Nav>
   );

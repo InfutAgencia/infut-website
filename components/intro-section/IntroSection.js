@@ -4,13 +4,16 @@ import {
   TagLine,
   Text,
 } from "./InroSection.elements";
+import Fade from "react-reveal";
 const IntroSection = () => {
   return (
     <SectionContainer id="base">
-      <TextWrapper>
-        <TagLine>Tu marca es un cohete</TagLine>
-        <Text>Impulsarla al universo digital es nuestra misión</Text>
-      </TextWrapper>
+      <Fade left>
+        <TextWrapper>
+          <TagLine>Tu marca es un cohete</TagLine>
+          <Text>Impulsarla al universo digital es nuestra misión</Text>
+        </TextWrapper>
+      </Fade>
     </SectionContainer>
   );
 };
