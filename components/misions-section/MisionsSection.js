@@ -1,6 +1,6 @@
 import Card from "../cards/Card";
 import { Container, Row } from "../layout/Layout.elements";
-import Fade from "react-reveal/fade";
+import Fade from "react-reveal/Fade";
 const MisionsSection = ({ projects }) => {
   return (
     <Container id="misiones">
