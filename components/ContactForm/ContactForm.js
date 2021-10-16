@@ -1,5 +1,4 @@
 import { useState } from "react";
-import * as gtag from "../../lib/gtag";
 import Jump from "react-reveal/Jump";
 import Fade from "react-reveal/Fade";
 import axiosClient from "../../config/axios";
@@ -14,11 +13,13 @@ import {
   ErrorWarning,
 } from "./ContactForm.elements";
 import { useForm } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 
 const ContactForm = () => {
   const { register, handleSubmit, reset } = useForm();
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
+  const { t } = useTranslation("common");
 
   //todo VErify Message before send it
   const sendMessage = (data) => {
@@ -51,20 +52,26 @@ const ContactForm = () => {
   return (
     <ContactContainer id="contacto">
       <Jump>
-        <ContactHeading>Háblanos, estamos para apoyarte</ContactHeading>
+        <ContactHeading>
+          {t("homePage.contactSection.contactForm.headLine")}
+        </ContactHeading>
       </Jump>
       <Fade bottom>
         <Form onSubmit={handleSubmit(sendMessage)}>
           <FormWrapper>
             <FormInput
-              placeholder="Nombre"
+              placeholder={t(
+                "homePage.contactSection.contactForm.form.nameField"
+              )}
               name="name"
               autoComplete="name"
               required
               {...register("name")}
             ></FormInput>
             <FormInput
-              placeholder="Email"
+              placeholder={t(
+                "homePage.contactSection.contactForm.form.emailField"
+              )}
               autoComplete="email"
               name="email"
               pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+"
@@ -72,7 +79,9 @@ const ContactForm = () => {
               required
             ></FormInput>
             <FormInput
-              placeholder="Teléfono"
+              placeholder={t(
+                "homePage.contactSection.contactForm.form.phoneField"
+              )}
               autoComplete="tel"
               name="phone"
               required
@@ -81,7 +90,9 @@ const ContactForm = () => {
           </FormWrapper>
           <FormWrapper>
             <TextArea
-              placeholder="Mensaje"
+              placeholder={t(
+                "homePage.contactSection.contactForm.form.messageField"
+              )}
               rows="5"
               name="message"
               autoComplete="off"
@@ -93,9 +104,15 @@ const ContactForm = () => {
               className={loading ? "spinner_loading" : ""}
               type="submit"
             >
-              <span class="button_text">Enviar</span>
+              <span class="button_text">
+                {t("homePage.contactSection.contactForm.form.sendButton")}
+              </span>
             </SubmitButton>
-            {error && <ErrorWarning>¡Ups! Ha ocurrido un error</ErrorWarning>}
+            {error && (
+              <ErrorWarning>
+                {t("homePage.contactSection.contactForm.form.errorWarning")}
+              </ErrorWarning>
+            )}
           </FormWrapper>
         </Form>
       </Fade>

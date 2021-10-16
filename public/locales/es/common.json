@@ -1,0 +1,85 @@
+{
+    "navbar": {
+       "links":  ["Base espacial", "Servicios", "Tripulación", "Misiones", "Blog","Contacto"]
+    },
+    "homePage": {
+        "introSection": {
+            "tagLine": "Tu marca es un cohete",
+            "headLine": "Impulsarla al universo digital es nuestra misión"
+        },
+        "aboutUsSection": {
+            "title": {
+                "headLine": "Infut",
+                "tagLine": "agencia digital"
+            },
+            "description": [
+                "Infut es un cosmódromo digital, un espacio creado para el lanzamiento, asistencia técnica y aterrizaje de cohetes en el nuevo mundo de la digitalización.", 
+                "Todas las naves espaciales necesitan soporte, para ello, Infut cuenta con un equipo capacitado que te respaldará monitoreando y construyendo estrategias para superar cualquier obstáculo que se presentente en el camino. No estarás solo, emprenderemos contigo esta aventura de digitalizar y transformar tu modelo de negocio.",
+                 "Pd: Es un viaje sin retorno, pero no te preocupes, estamos seguros de que no querrás volver atrás."]
+        },
+        "servicesSection": {
+            "col1": {
+                "title": "Diseño y desarrollo a medida para empresas, startups, planes de negocio.", 
+                "serviceItems": [
+                    "Apps móviles para android y IOS.",
+                    "Apps de M-Commerce",
+                    "Diseño UI'UX",
+                    "Eventos digitales",
+                    "Integración multiplataforma",
+                    "Aplicaciones Para WordPress",
+                    "Apps de visualización de productos",
+                    "Aplicaciones de escritorio"
+                ]
+                
+            },
+            "col2": {
+                "title": "Estrategias de marketing digital y offline", 
+                "serviceItems": [
+                    "Community manager",
+                    "Copywriting",
+                    "Publicidad",
+                    "Creación de marca",
+                    "Chats bots",
+                    "Tiendas en redes sociales",
+                    "Apps de visualización de productos",
+                    "Aplicaciones de escritorio",
+                    "Omnicanalidad",
+                    "Filtros para redes sociales"
+                ]
+                
+            },
+            "col3": {
+                "title": "Servicio de diseño y montaje audiovisual", 
+                "serviceItems": [
+                    "Apps web",
+                    "Diseño y desarrollo de sitios web",
+                    "Progressive Web Applications - PWA",
+                    "Apps de realidad aumentada,realidad virtual y realidad mixta",
+                    "Inteligencia artificial",
+                    "Videojuegos",
+                    "Gamificación",
+                    "Machine learning"
+                ]
+                
+            }
+        },
+        "contactSection":{
+            "instagram": {
+                "headLine":"Un día en la base espacial.",
+                "buttonText": "Síguenos"
+            },
+            "contactForm": {
+                "headLine":"Háblanos, estamos para apoyarte.",
+                "form": {
+                    "nameField": "Nombre",
+                    "emailField": "Email",
+                    "phoneField": "Teléfono",
+                    "messageField": "Mensaje",
+                    "sendButton": "Enviar mensaje",
+                    "errorWarning": "¡Ups! Ha ocurrido un error"
+                }
+            }
+        }
+    }
+    
+}

@@ -10,12 +10,16 @@ import {
 
 import Jump from "react-reveal/Jump";
 import Fade from "react-reveal/Fade";
+import { useTranslation } from "react-i18next";
 const InstagramSection = ({ instagramPosts }) => {
+  const { t } = useTranslation("common");
   return (
     <InstagramContainer>
       <Container mBot="0rem">
         <Fade>
-          <HeadTitle>Un dia en la base espacial</HeadTitle>
+          <HeadTitle>
+            {t("homePage.contactSection.instagram.headLine")}
+          </HeadTitle>
         </Fade>
         <InfoContainer>
           <UserText>@infut</UserText>
@@ -25,11 +29,11 @@ const InstagramSection = ({ instagramPosts }) => {
               target={"blank"}
               rel={"noopener"}
             >
-              Siguenos
+              {t("homePage.contactSection.instagram.buttonText")}
             </FollowButton>
           </Jump>
         </InfoContainer>
-        <Row col={3}>
+        {/* <Row col={3}>
           {instagramPosts.map(({ node }, i) => (
             <Card
               post={{
@@ -41,7 +45,7 @@ const InstagramSection = ({ instagramPosts }) => {
               key={i}
             />
           ))}
-        </Row>
+        </Row> */}
       </Container>
     </InstagramContainer>
   );

@@ -98,6 +98,16 @@ export const NavLinkText = styled.p`
   font-size: 18px;
 `;
 
+export const NavLinkLocale = styled.div`
+  max-width: 75px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  cursor: pointer;
+`;
+
 export const ExternalLink = styled.a`
   color: white;
   text-decoration: none;
