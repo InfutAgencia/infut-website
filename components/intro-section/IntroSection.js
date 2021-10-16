@@ -4,16 +4,19 @@ import {
   TagLine,
   Text,
 } from "./InroSection.elements";
-import Fade from "react-reveal";
+//import useTranslation from "next-translate/useTranslation";
+import { useTranslation } from "next-i18next";
 const IntroSection = () => {
+  const { t } = useTranslation("common");
+
   return (
     <SectionContainer id="base">
-      <Fade left>
-        <TextWrapper>
-          <TagLine>Tu marca es un cohete</TagLine>
-          <Text>Impulsarla al universo digital es nuestra misión</Text>
-        </TextWrapper>
-      </Fade>
+      {/* <Fade left> */}
+      <TextWrapper>
+        <TagLine>{t("homePage.introSection.tagLine")}</TagLine>
+        <Text>{t("homePage.introSection.headLine")}</Text>
+      </TextWrapper>
+      {/* </Fade> */}
     </SectionContainer>
   );
 };

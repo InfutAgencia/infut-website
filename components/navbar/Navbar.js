@@ -1,6 +1,9 @@
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { useRouter } from "next/router";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { useTranslation } from "next-i18next";
 import {
   Nav,
   MobileIcon,
@@ -9,16 +12,17 @@ import {
   NavLinkList,
   NavLinkItem,
   NavLinkText,
+  NavLinkLocale,
 } from "./Navbar.elements";
-import Jump from "react-reveal/Jump";
 import Fade from "react-reveal/Fade";
 
 const Navbar = ({ bg }) => {
+  const { t } = useTranslation("common");
   const [click, setClick] = useState(false);
   const [navColor, setNavColor] = useState(false);
-
+  const router = useRouter();
   const handleClick = () => {
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 960) {
       setClick(!click);
     }
   };
@@ -59,32 +63,46 @@ const Navbar = ({ bg }) => {
           <NavLinkList onClick={handleClick} click={click}>
             <NavLinkItem>
               <Link href="/#base">
-                <NavLinkText>Base espacial</NavLinkText>
+                <NavLinkText>{t("navbar.links.0")}</NavLinkText>
               </Link>
             </NavLinkItem>
             <NavLinkItem>
               <Link href="/#servicios">
-                <NavLinkText>Servicios</NavLinkText>
+                <NavLinkText>{t("navbar.links.1")}</NavLinkText>
               </Link>
             </NavLinkItem>
             <NavLinkItem>
               <Link href="/">
-                <NavLinkText>Tripulación</NavLinkText>
+                <NavLinkText>{t("navbar.links.2")}</NavLinkText>
               </Link>
             </NavLinkItem>
             <NavLinkItem>
               <Link href="/#misiones">
-                <NavLinkText>Misiones</NavLinkText>
+                <NavLinkText>{t("navbar.links.3")}</NavLinkText>
               </Link>
             </NavLinkItem>
-            <NavLinkItem>
+            {/* <NavLinkItem>
               <Link href="/#">
-                <NavLinkText>Blog</NavLinkText>
+                <NavLinkText>{t("navbar.links.4")}</NavLinkText>
               </Link>
-            </NavLinkItem>
+            </NavLinkItem> */}
             <NavLinkItem>
               <Link href="/#contacto">
-                <NavLinkText>Contacto</NavLinkText>
+                <NavLinkText>{t("navbar.links.5")}</NavLinkText>
+              </Link>
+            </NavLinkItem>
+            <NavLinkItem>
+              <Link
+                href={router.asPath}
+                locale={router.locale === "es" ? "en" : "es"}
+              >
+                <NavLinkLocale>
+                  {router.locale === "es" ? (
+                    <Image src="/img/english.webp" width={128} height={67.5} />
+                  ) : (
+                    <Image src="/img/spanish.webp" width={128} height={67.5} />
+                  )}
+                </NavLinkLocale>
               </Link>
             </NavLinkItem>
           </NavLinkList>

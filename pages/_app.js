@@ -4,6 +4,7 @@ import "../styles/globals.css";
 import "../styles/fonts.css";
 import Head from "next/head";
 import GoogleAnalytics from "../components/GoogleAnalytics/GoogleAnalytics";
+import { appWithTranslation } from "next-i18next";
 
 function App({ Component, pageProps }) {
   return (
@@ -11,6 +12,8 @@ function App({ Component, pageProps }) {
       <Head>
         <meta name="author" content="Infut" />
         <meta name="description" content="Infut Site" />
+        {/* <link rel="alternate" hreflang="en" />
+        <link rel="alternate" hreflang="en" /> */}
       </Head>
       <GlobalStyle />
       <GoogleAnalytics>
@@ -21,4 +24,4 @@ function App({ Component, pageProps }) {
   );
 }
 
-export default App;
+export default appWithTranslation(App);

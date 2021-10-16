@@ -1,0 +1,84 @@
+{
+    "navbar": {
+       "links":  ["Spacial base", "Services", "Crew", "Missions","Blog", "Contact"]
+    },
+    "homePage": {
+        "introSection": {
+            "tagLine": "Your brand is a rocket",
+            "headLine": "Driving it to the digital universe is our mission."
+        },
+        "aboutUsSection": {
+            "title": {
+                "headLine": "Infut",
+                "tagLine": "digital agency"
+            },
+            "description": [
+                "Infut is a digital cosmodrome, a space created for the launch, technical assistance and landing of rockets in the new world of digitization.", 
+                "All spaceships need support, for this, Infut has a trained team that will support you by monitoring and building strategies to overcome any obstacle that appears along the way. You won't be alone, we will undertake with you this adventure of digitizing and transforming your business model.",
+                 "Ps: It's a one-way trip, but don't worry, we're sure you won't want to go back."]
+        },
+        "servicesSection": {
+            "col1": {
+                "title": "Custom design and development for companies, startups, business plans.", 
+                "serviceItems": [
+                    "Mobile apps for android and IOS.",
+                    "M-Commerce Apps",
+                    "UI'UX design",
+                    "Digital events",
+                    "Cross-platform integration",
+                    "Applications For WordPress",
+                    "Product display apps",
+                    "Desktop Applications"
+                ]
+                
+            },
+            "col2": {
+                "title": "Digital and offline marketing strategies", 
+                "serviceItems": [
+                    "Community manager",
+                    "Copywriting",
+                    "Advertising",
+                    "Brand creation",
+                    "Chats bots",
+                    "Shops in social networks",
+                    "Product display apps",
+                    "Desktop applications",
+                    "Omnichannel",
+                    "Filters for social networks"
+                ]
+                
+            },
+            "col3": {
+                "title": "Audiovisual design and assembly service", 
+                "serviceItems": [
+                    "Web apps",
+                    "Web design and development",
+                    "Progressive Web Applications - PWA",
+                    "Augmented reality, virtual reality and mixed reality apps",
+                    "Artificial intelligence",
+                    "Videogames",
+                    "Gamification",
+                    "Machine learning"
+                ]
+                
+            }
+        },
+        "contactSection":{
+            "instagram": {
+                "headLine":"A day at the space base",
+                "buttonText": "Follow us"
+            },
+            "contactForm": {
+                "headLine":"Talk to us, we are here to support you.",
+                "form": {
+                    "nameField": "Name",
+                    "emailField": "Email",
+                    "phoneField": "Phone number",
+                    "messageField": "Message",
+                    "sendButton": "Send message",
+                    "errorWarning": "Whoops! An error has occurred"
+                }
+            }
+        }
+    }
+}

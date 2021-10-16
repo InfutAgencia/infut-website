@@ -11,8 +11,9 @@ import {
   ServicesItem,
 } from "./Services.elements";
 import Fade from "react-reveal/Fade";
-import Jump from "react-reveal/Jump";
+import { useTranslation } from "next-i18next";
 const ServicesSection = () => {
+  const { t } = useTranslation("common");
   return (
     <Container id="servicios">
       <Row col={3}>
@@ -22,10 +23,7 @@ const ServicesSection = () => {
               <BlockImage src="/img/ship.png" width="50%" height="50%" />
             </BlockImageContainer>
             <BlockText>
-              <PinkColor>
-                Diseño y desarrollo a medida para empresas, startups, planes de
-                negocio.
-              </PinkColor>
+              <PinkColor>{t("homePage.servicesSection.col1.title")}</PinkColor>
             </BlockText>
           </ContentBlock>
         </ContentWrapper>
@@ -35,7 +33,7 @@ const ServicesSection = () => {
               <BlockImage src="/img/telescope.png" width="50%" height="50%" />
             </BlockImageContainer>
             <BlockText>
-              <PinkColor>Estrategias de marketing digital y offline.</PinkColor>
+              <PinkColor>{t("homePage.servicesSection.col2.title")}</PinkColor>
             </BlockText>
           </ContentBlock>
         </ContentWrapper>
@@ -45,7 +43,7 @@ const ServicesSection = () => {
               <BlockImage src="/img/astronaut.png" width="50" height="50%" />
             </BlockImageContainer>
             <BlockText>
-              <PinkColor>Servicio de diseño y montaje audiovisual</PinkColor>
+              <PinkColor>{t("homePage.servicesSection.col3.title")}</PinkColor>
             </BlockText>
           </ContentBlock>
         </ContentWrapper>
@@ -55,28 +53,44 @@ const ServicesSection = () => {
             <Fade bottom>
               <ServicesList>
                 <ServicesItem>
-                  <BlockText>Apps móviles para android y IOS</BlockText>
+                  <BlockText>
+                    {t("homePage.servicesSection.col1.serviceItems.0")}
+                  </BlockText>
                 </ServicesItem>
                 <ServicesItem>
-                  <BlockText>Apps de M-Commerce</BlockText>
+                  <BlockText>
+                    {t("homePage.servicesSection.col1.serviceItems.1")}
+                  </BlockText>
                 </ServicesItem>
                 <ServicesItem>
-                  <BlockText>Diseño UI-UX</BlockText>
+                  <BlockText>
+                    {t("homePage.servicesSection.col1.serviceItems.2")}
+                  </BlockText>
                 </ServicesItem>
                 <ServicesItem>
-                  <BlockText>Eventos digitales</BlockText>
+                  <BlockText>
+                    {t("homePage.servicesSection.col1.serviceItems.3")}
+                  </BlockText>
                 </ServicesItem>
                 <ServicesItem>
-                  <BlockText>Integración multiplataforma</BlockText>
+                  <BlockText>
+                    {t("homePage.servicesSection.col1.serviceItems.4")}
+                  </BlockText>
                 </ServicesItem>
                 <ServicesItem>
-                  <BlockText>Aplicaciones Para WordPress</BlockText>
+                  <BlockText>
+                    {t("homePage.servicesSection.col1.serviceItems.5")}
+                  </BlockText>
                 </ServicesItem>
                 <ServicesItem>
-                  <BlockText>Apps de visualización de productos</BlockText>
+                  <BlockText>
+                    {t("homePage.servicesSection.col1.serviceItems.6")}
+                  </BlockText>
                 </ServicesItem>
                 <ServicesItem>
-                  <BlockText>Aplicaciones de escritorio</BlockText>
+                  <BlockText>
+                    {t("homePage.servicesSection.col1.serviceItems.7")}
+                  </BlockText>
                 </ServicesItem>
               </ServicesList>
             </Fade>
@@ -87,28 +101,44 @@ const ServicesSection = () => {
             <Fade bottom>
               <ServicesList>
                 <ServicesItem>
-                  <BlockText>Community manager</BlockText>
+                  <BlockText>
+                    {t("homePage.servicesSection.col2.serviceItems.0")}
+                  </BlockText>
                 </ServicesItem>
                 <ServicesItem>
-                  <BlockText>Copywriting</BlockText>
+                  <BlockText>
+                    {t("homePage.servicesSection.col2.serviceItems.1")}
+                  </BlockText>
                 </ServicesItem>
                 <ServicesItem>
-                  <BlockText>Publicidad</BlockText>
+                  <BlockText>
+                    {t("homePage.servicesSection.col2.serviceItems.2")}
+                  </BlockText>
                 </ServicesItem>
                 <ServicesItem>
-                  <BlockText>Creación de marca</BlockText>
+                  <BlockText>
+                    {t("homePage.servicesSection.col2.serviceItems.3")}
+                  </BlockText>
                 </ServicesItem>
                 <ServicesItem>
-                  <BlockText>Chats bots</BlockText>
+                  <BlockText>
+                    {t("homePage.servicesSection.col2.serviceItems.4")}
+                  </BlockText>
                 </ServicesItem>
                 <ServicesItem>
-                  <BlockText>Shops en redes sociales</BlockText>
+                  <BlockText>
+                    {t("homePage.servicesSection.col2.serviceItems.5")}
+                  </BlockText>
                 </ServicesItem>
                 <ServicesItem>
-                  <BlockText>Omnicanalidad</BlockText>
+                  <BlockText>
+                    {t("homePage.servicesSection.col2.serviceItems.6")}
+                  </BlockText>
                 </ServicesItem>
                 <ServicesItem>
-                  <BlockText>Filtro para redes sociales</BlockText>
+                  <BlockText>
+                    {t("homePage.servicesSection.col2.serviceItems.7")}
+                  </BlockText>
                 </ServicesItem>
               </ServicesList>
             </Fade>
@@ -120,33 +150,46 @@ const ServicesSection = () => {
             <Fade bottom>
               <ServicesList>
                 <ServicesItem>
-                  <BlockText>Apps Web</BlockText>
-                </ServicesItem>
-                <ServicesItem>
                   <BlockText>
-                    Diseño y desarrollo de sitios web corporativas/E-Commerce
+                    {t("homePage.servicesSection.col3.serviceItems.0")}
                   </BlockText>
                 </ServicesItem>
                 <ServicesItem>
-                  <BlockText>Progressive Web Applications - PWA</BlockText>
-                </ServicesItem>
-                <ServicesItem>
                   <BlockText>
-                    Apps de realidad aumentada,realidad virtual y realidad mixta
+                    {t("homePage.servicesSection.col3.serviceItems.1")}
                   </BlockText>
                 </ServicesItem>
                 <ServicesItem>
-                  <BlockText>Inteligencia artificial</BlockText>
-                </ServicesItem>
-                <ServicesItem>
-                  <BlockText>Videojuegos</BlockText>
-                </ServicesItem>
-                <ServicesItem>
-                  <BlockText>Gamificación</BlockText>
+                  <BlockText>
+                    {" "}
+                    {t("homePage.servicesSection.col3.serviceItems.2")}
+                  </BlockText>
                 </ServicesItem>
                 <ServicesItem>
                   <BlockText>
-                    Automatización de procesos (machine learning)
+                    {t("homePage.servicesSection.col3.serviceItems.3")}
+                  </BlockText>
+                </ServicesItem>
+                <ServicesItem>
+                  <BlockText>
+                    {t("homePage.servicesSection.col3.serviceItems.4")}
+                  </BlockText>
+                </ServicesItem>
+                <ServicesItem>
+                  <BlockText>
+                    {" "}
+                    {t("homePage.servicesSection.col3.serviceItems.5")}
+                  </BlockText>
+                </ServicesItem>
+                <ServicesItem>
+                  <BlockText>
+                    {" "}
+                    {t("homePage.servicesSection.col3.serviceItems.6")}
+                  </BlockText>
+                </ServicesItem>
+                <ServicesItem>
+                  <BlockText>
+                    {t("homePage.servicesSection.col3.serviceItems.7")}
                   </BlockText>
                 </ServicesItem>
               </ServicesList>

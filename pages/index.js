@@ -8,6 +8,7 @@ import Navbar from "../components/navbar/Navbar";
 import ServicesSection from "../components/services-section/ServicesSection";
 import { getInstagramPosts } from "../lib/Instagram API/getPosts";
 import { getInfutProjects } from "../lib/Projects/getInfutProjects";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export default function Home({ instagramPosts, projects }) {
   return (
@@ -16,6 +17,7 @@ export default function Home({ instagramPosts, projects }) {
         <link rel="icon" type="favicon/ico" href="/infut.ico" />
         <title>Infut</title>
       </Head>
+
       <Navbar />
       <IntroSection />
       <AboutUsSection />
@@ -27,13 +29,14 @@ export default function Home({ instagramPosts, projects }) {
   );
 }
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps({ locale }) {
   const { posts } = await getInstagramPosts();
   const { projects } = await getInfutProjects();
   return {
     props: {
       instagramPosts: posts,
       projects,
+      ...(await serverSideTranslations(locale)),
     },
   };
 }
