@@ -10,7 +10,7 @@ import { getInstagramPosts } from "../lib/Instagram API/getPosts";
 import { getInfutProjects } from "../lib/Projects/getInfutProjects";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-export default function Home({ instagramPosts, projects }) {
+const Home = ({ instagramPosts, projects }) => {
   return (
     <>
       <Head>
@@ -27,7 +27,9 @@ export default function Home({ instagramPosts, projects }) {
       <ContactForm />
     </>
   );
-}
+};
+
+export default Home;
 
 export async function getServerSideProps({ locale }) {
   const { posts } = await getInstagramPosts();
