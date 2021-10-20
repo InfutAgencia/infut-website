@@ -5,5 +5,9 @@
         "*": ["common"],
         "/":["home"],
         "/blog" : ["blog"]
+    },
+    "localeSubpaths":{     
+        "en": "en",    
+        "es": "es"  
     }
 }
