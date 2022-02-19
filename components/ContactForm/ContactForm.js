@@ -92,7 +92,7 @@ const ContactForm = () => {
               className={loading ? 'spinner_loading' : ''}
               type="submit"
             >
-              <span class="button_text">Send message</span>
+              <span className="button_text">Send message</span>
             </SubmitButton>
             {error && (
               <ErrorWarning>Whoops! An error has occurred</ErrorWarning>
