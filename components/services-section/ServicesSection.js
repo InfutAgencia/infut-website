@@ -1,4 +1,4 @@
-import { Container, Row } from "../layout/Layout.elements";
+import { Container, Row } from '../layout/Layout.elements';
 import {
   ServicesContainer,
   ContentWrapper,
@@ -8,12 +8,10 @@ import {
   BlockText,
   PinkColor,
   ServicesList,
-  ServicesItem,
-} from "./Services.elements";
-import Fade from "react-reveal/Fade";
-import { useTranslation } from "next-i18next";
+  ServicesItem
+} from './Services.elements';
+import Fade from 'react-reveal/Fade';
 const ServicesSection = () => {
-  const { t } = useTranslation("common");
   return (
     <Container id="servicios">
       <Row col={3}>
@@ -23,7 +21,10 @@ const ServicesSection = () => {
               <BlockImage src="/img/ship.png" width="50%" height="50%" />
             </BlockImageContainer>
             <BlockText>
-              <PinkColor>{t("homePage.servicesSection.col1.title")}</PinkColor>
+              <PinkColor>
+                Custom design and development for companies, startups, business
+                plans.
+              </PinkColor>
             </BlockText>
           </ContentBlock>
         </ContentWrapper>
@@ -33,7 +34,7 @@ const ServicesSection = () => {
               <BlockImage src="/img/telescope.png" width="50%" height="50%" />
             </BlockImageContainer>
             <BlockText>
-              <PinkColor>{t("homePage.servicesSection.col2.title")}</PinkColor>
+              <PinkColor>Digital and offline marketing strategies</PinkColor>
             </BlockText>
           </ContentBlock>
         </ContentWrapper>
@@ -43,7 +44,7 @@ const ServicesSection = () => {
               <BlockImage src="/img/astronaut.png" width="50" height="50%" />
             </BlockImageContainer>
             <BlockText>
-              <PinkColor>{t("homePage.servicesSection.col3.title")}</PinkColor>
+              <PinkColor>Audiovisual design and assembly service</PinkColor>
             </BlockText>
           </ContentBlock>
         </ContentWrapper>
@@ -53,44 +54,28 @@ const ServicesSection = () => {
             <Fade bottom>
               <ServicesList>
                 <ServicesItem>
-                  <BlockText>
-                    {t("homePage.servicesSection.col1.serviceItems.0")}
-                  </BlockText>
+                  <BlockText>Mobile apps for android and IOS.</BlockText>
                 </ServicesItem>
                 <ServicesItem>
-                  <BlockText>
-                    {t("homePage.servicesSection.col1.serviceItems.1")}
-                  </BlockText>
+                  <BlockText>M-Commerce Apps</BlockText>
                 </ServicesItem>
                 <ServicesItem>
-                  <BlockText>
-                    {t("homePage.servicesSection.col1.serviceItems.2")}
-                  </BlockText>
+                  <BlockText>UI'UX design</BlockText>
                 </ServicesItem>
                 <ServicesItem>
-                  <BlockText>
-                    {t("homePage.servicesSection.col1.serviceItems.3")}
-                  </BlockText>
+                  <BlockText>Digital events</BlockText>
                 </ServicesItem>
                 <ServicesItem>
-                  <BlockText>
-                    {t("homePage.servicesSection.col1.serviceItems.4")}
-                  </BlockText>
+                  <BlockText>Cross-platform integration</BlockText>
                 </ServicesItem>
                 <ServicesItem>
-                  <BlockText>
-                    {t("homePage.servicesSection.col1.serviceItems.5")}
-                  </BlockText>
+                  <BlockText>Applications For WordPress</BlockText>
                 </ServicesItem>
                 <ServicesItem>
-                  <BlockText>
-                    {t("homePage.servicesSection.col1.serviceItems.6")}
-                  </BlockText>
+                  <BlockText>Product display apps</BlockText>
                 </ServicesItem>
                 <ServicesItem>
-                  <BlockText>
-                    {t("homePage.servicesSection.col1.serviceItems.7")}
-                  </BlockText>
+                  <BlockText>Desktop Applications</BlockText>
                 </ServicesItem>
               </ServicesList>
             </Fade>
@@ -101,44 +86,28 @@ const ServicesSection = () => {
             <Fade bottom>
               <ServicesList>
                 <ServicesItem>
-                  <BlockText>
-                    {t("homePage.servicesSection.col2.serviceItems.0")}
-                  </BlockText>
+                  <BlockText>Community manager</BlockText>
                 </ServicesItem>
                 <ServicesItem>
-                  <BlockText>
-                    {t("homePage.servicesSection.col2.serviceItems.1")}
-                  </BlockText>
+                  <BlockText>Copywriting</BlockText>
                 </ServicesItem>
                 <ServicesItem>
-                  <BlockText>
-                    {t("homePage.servicesSection.col2.serviceItems.2")}
-                  </BlockText>
+                  <BlockText>Advertising</BlockText>
                 </ServicesItem>
                 <ServicesItem>
-                  <BlockText>
-                    {t("homePage.servicesSection.col2.serviceItems.3")}
-                  </BlockText>
+                  <BlockText>Brand creation</BlockText>
                 </ServicesItem>
                 <ServicesItem>
-                  <BlockText>
-                    {t("homePage.servicesSection.col2.serviceItems.4")}
-                  </BlockText>
+                  <BlockText>Chats bots</BlockText>
                 </ServicesItem>
                 <ServicesItem>
-                  <BlockText>
-                    {t("homePage.servicesSection.col2.serviceItems.5")}
-                  </BlockText>
+                  <BlockText>Shops in social networks</BlockText>
                 </ServicesItem>
                 <ServicesItem>
-                  <BlockText>
-                    {t("homePage.servicesSection.col2.serviceItems.6")}
-                  </BlockText>
+                  <BlockText>Product display apps</BlockText>
                 </ServicesItem>
                 <ServicesItem>
-                  <BlockText>
-                    {t("homePage.servicesSection.col2.serviceItems.7")}
-                  </BlockText>
+                  <BlockText>Desktop applications</BlockText>
                 </ServicesItem>
               </ServicesList>
             </Fade>
@@ -150,47 +119,30 @@ const ServicesSection = () => {
             <Fade bottom>
               <ServicesList>
                 <ServicesItem>
-                  <BlockText>
-                    {t("homePage.servicesSection.col3.serviceItems.0")}
-                  </BlockText>
+                  <BlockText>Web apps</BlockText>
+                </ServicesItem>
+                <ServicesItem>
+                  <BlockText>Web design and development</BlockText>
+                </ServicesItem>
+                <ServicesItem>
+                  <BlockText>Progressive Web Applications - PWA</BlockText>
                 </ServicesItem>
                 <ServicesItem>
                   <BlockText>
-                    {t("homePage.servicesSection.col3.serviceItems.1")}
+                    Augmented reality, virtual reality and mixed reality apps
                   </BlockText>
                 </ServicesItem>
                 <ServicesItem>
-                  <BlockText>
-                    {" "}
-                    {t("homePage.servicesSection.col3.serviceItems.2")}
-                  </BlockText>
+                  <BlockText>Artificial intelligence</BlockText>
                 </ServicesItem>
                 <ServicesItem>
-                  <BlockText>
-                    {t("homePage.servicesSection.col3.serviceItems.3")}
-                  </BlockText>
+                  <BlockText>Videogames</BlockText>
                 </ServicesItem>
                 <ServicesItem>
-                  <BlockText>
-                    {t("homePage.servicesSection.col3.serviceItems.4")}
-                  </BlockText>
+                  <BlockText>Gamification</BlockText>
                 </ServicesItem>
                 <ServicesItem>
-                  <BlockText>
-                    {" "}
-                    {t("homePage.servicesSection.col3.serviceItems.5")}
-                  </BlockText>
-                </ServicesItem>
-                <ServicesItem>
-                  <BlockText>
-                    {" "}
-                    {t("homePage.servicesSection.col3.serviceItems.6")}
-                  </BlockText>
-                </ServicesItem>
-                <ServicesItem>
-                  <BlockText>
-                    {t("homePage.servicesSection.col3.serviceItems.7")}
-                  </BlockText>
+                  <BlockText>Machine learning</BlockText>
                 </ServicesItem>
               </ServicesList>
             </Fade>

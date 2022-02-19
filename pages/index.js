@@ -1,14 +1,13 @@
-import Head from "next/head";
-import AboutUsSection from "../components/about-us-section/AboutUsSection";
-import ContactForm from "../components/ContactForm/ContactForm";
-import InstagramSection from "../components/instagram-section/InstagramSection";
-import IntroSection from "../components/intro-section/IntroSection";
-import MisionsSection from "../components/misions-section/MisionsSection";
-import Navbar from "../components/navbar/Navbar";
-import ServicesSection from "../components/services-section/ServicesSection";
-import { getInstagramPosts } from "../lib/Instagram API/getPosts";
-import { getInfutProjects } from "../lib/Projects/getInfutProjects";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import Head from 'next/head';
+import AboutUsSection from '../components/about-us-section/AboutUsSection';
+import ContactForm from '../components/ContactForm/ContactForm';
+import InstagramSection from '../components/instagram-section/InstagramSection';
+import IntroSection from '../components/intro-section/IntroSection';
+import MisionsSection from '../components/misions-section/MisionsSection';
+import Navbar from '../components/navbar/Navbar';
+import ServicesSection from '../components/services-section/ServicesSection';
+import { getInstagramPosts } from '../lib/Instagram API/getPosts';
+import { getInfutProjects } from '../lib/Projects/getInfutProjects';
 
 const Home = ({ instagramPosts, projects }) => {
   return (
@@ -37,8 +36,7 @@ export async function getServerSideProps({ locale }) {
   return {
     props: {
       instagramPosts: posts,
-      projects,
-      ...(await serverSideTranslations(locale)),
-    },
+      projects
+    }
   };
 }

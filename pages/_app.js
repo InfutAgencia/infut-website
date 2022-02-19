@@ -1,10 +1,9 @@
-import { Container, GlobalStyle } from "../components/layout/Layout.elements";
-import Navbar from "../components/navbar/Navbar";
-import "../styles/globals.css";
-import "../styles/fonts.css";
-import Head from "next/head";
-import GoogleAnalytics from "../components/GoogleAnalytics/GoogleAnalytics";
-import { appWithTranslation } from "next-i18next";
+import { Container, GlobalStyle } from '../components/layout/Layout.elements';
+import Navbar from '../components/navbar/Navbar';
+import '../styles/globals.css';
+import '../styles/fonts.css';
+import Head from 'next/head';
+import GoogleAnalytics from '../components/GoogleAnalytics/GoogleAnalytics';
 
 function App({ Component, pageProps }) {
   return (
@@ -24,4 +23,4 @@ function App({ Component, pageProps }) {
   );
 }
 
-export default appWithTranslation(App);
+export default App;

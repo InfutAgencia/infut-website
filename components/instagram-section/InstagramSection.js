@@ -1,35 +1,32 @@
-import Card from "../cards/Card";
-import { Container, Row } from "../layout/Layout.elements";
+import Card from '../cards/Card';
+import { Container, Row } from '../layout/Layout.elements';
 import {
   InstagramContainer,
   FollowButton,
   HeadTitle,
   InfoContainer,
-  UserText,
-} from "./InstagramSection.elements";
+  UserText
+} from './InstagramSection.elements';
 
-import Jump from "react-reveal/Jump";
-import Fade from "react-reveal/Fade";
-import { useTranslation } from "react-i18next";
+import Jump from 'react-reveal/Jump';
+import Fade from 'react-reveal/Fade';
+
 const InstagramSection = ({ instagramPosts }) => {
-  const { t } = useTranslation("common");
   return (
     <InstagramContainer>
       <Container mBot="0rem">
         <Fade>
-          <HeadTitle>
-            {t("homePage.contactSection.instagram.headLine")}
-          </HeadTitle>
+          <HeadTitle>A day at the space base</HeadTitle>
         </Fade>
         <InfoContainer>
           <UserText>@infut</UserText>
           <Jump>
             <FollowButton
-              href={"https://www.instagram.com/infutgrowth/"}
-              target={"blank"}
-              rel={"noopener"}
+              href={'https://www.instagram.com/infutgrowth/'}
+              target={'blank'}
+              rel={'noopener'}
             >
-              {t("homePage.contactSection.instagram.buttonText")}
+              Follow us
             </FollowButton>
           </Jump>
         </InfoContainer>
