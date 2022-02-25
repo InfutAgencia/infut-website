@@ -1,4 +1,4 @@
-import * as gtag from "../../lib/gtag";
+import * as gtag from '../../lib/gtag';
 import {
   CardContainer,
   CardImage,
@@ -6,17 +6,17 @@ import {
   CardBody,
   CardButton,
   Content,
-  CardText,
-} from "./Card.elements";
+  CardText
+} from './Card.elements';
 
 //? reemplazar ur con post o proyecto
 const Card = ({ project, alt, type }) => {
   const handleView = ({ project_viewed }) => {
-    if (typeof window !== "undefined") {
+    if (typeof window !== 'undefined') {
       gtag.event({
-        action: "viewed_project",
-        category: "projects",
-        label: project_viewed,
+        action: 'viewed_project',
+        category: 'projects',
+        label: project_viewed
       });
     }
   };
@@ -24,7 +24,7 @@ const Card = ({ project, alt, type }) => {
   return (
     <CardContainer url={project?.posterImage?.formats?.small?.url}>
       {/* <CardImage src={project?.posterImage?.url} alt={alt ? alt : ""} /> */}
-      {type === "post" ? (
+      {type === 'post' ? (
         <>
           <CardBody>
             <Content>

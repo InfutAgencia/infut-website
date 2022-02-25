@@ -8,13 +8,13 @@ import Navbar from '../components/navbar/Navbar';
 import ServicesSection from '../components/services-section/ServicesSection';
 import { getInstagramPosts } from '../lib/Instagram API/getPosts';
 import { getInfutProjects } from '../lib/Projects/getInfutProjects';
-
 const Home = ({ instagramPosts, projects }) => {
   return (
     <>
       <Head>
-        <link rel="icon" type="favicon/ico" href="/infut.ico" />
+        <meta name="description" content="Infut Site" />
         <title>Infut</title>
+        <link rel="icon" type="favicon/ico" href="/infut.ico" />
       </Head>
 
       <Navbar />

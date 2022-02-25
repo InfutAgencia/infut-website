@@ -19,6 +19,7 @@
     "react-hook-form": "^7.12.2",
     "react-icons": "^4.2.0",
     "react-reveal": "^1.2.2",
+    "react-whatsapp": "^0.2.1",
     "sharp": "^0.29.1",
     "styled-components": "^5.2.3"
   }
