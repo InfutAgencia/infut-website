@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Jump from 'react-reveal/Jump';
 import Fade from 'react-reveal/Fade';
 import axiosClient from '../../config/axios';
+import * as gtag from '../../lib/gtag';
 import {
   ContactContainer,
   ContactHeading,
