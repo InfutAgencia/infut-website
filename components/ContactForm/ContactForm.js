@@ -42,6 +42,7 @@ const ContactForm = () => {
         reset();
       })
       .catch((err) => {
+        console.log(err);
         setError(true);
         setLoading(false);
       });
