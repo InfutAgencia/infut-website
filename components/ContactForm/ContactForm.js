@@ -26,15 +26,19 @@ const ContactForm = () => {
       .post('/contacts', data)
       .then((res) => {
         console.log(res.data);
-        if (typeof window !== 'undefined') {
-          gtag.event({
-            action: 'SubmitContactForm',
-            category: 'Contact',
-            label: res.data?.message
-          });
-          gtag.dataLayerEvent({
-            eventName: 'SubmitContactForm'
-          });
+        try {
+          if (typeof window !== 'undefined') {
+            gtag.event({
+              action: 'SubmitContactForm',
+              category: 'Contact',
+              label: res.data?.message
+            });
+            gtag.dataLayerEvent({
+              eventName: 'SubmitContactForm'
+            });
+          }
+        } catch (error) {
+          console.log('Error with GTAG', error);
         }
 
         setError(false);
